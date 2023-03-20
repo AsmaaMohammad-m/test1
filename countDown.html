@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create in js</title>
+         <style>
+
+        </style>
+    </head>
+    <body>
+        <div>10</div>
+       <button id="btn">Stop</button>
+        
+        <script>
+           var div = document.querySelector('div'),
+               btn = document.getElementById('btn'),
+               time;
+            
+            function countDown () {
+                'use strict';
+                if(div.textContent <= 0){
+                    div.textContent = "Done...";
+                    clearInterval(time);
+                } else {
+                    div.textContent = div.textContent - 1
+                }
+            }
+            time = setInterval(countDown , 1000);
+            
+            btn.onclick = function(){
+                clearInterval(time);
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
